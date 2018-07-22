@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta content="width=device-width,initial-scale=1" name="viewport">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<title>Memory Game</title>
+	<meta content="" name="description">
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css" rel="stylesheet prefetch">
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
+	<link href="css/app.css" rel="stylesheet">
+</head>
+<body>
+	<div class="container">
+		<header>
+			<h1 class="animated bounceInDown">Memory Game</h1>
+		</header>
+		<section class="score-panel">
+			<ul class="stars">
+				<li><i class="fa fa-star"></i></li>
+				<li><i class="fa fa-star"></i></li>
+				<li><i class="fa fa-star"></i></li>
+			</ul><span class="moves">0</span> Moves <span class="time">0</span> Seconds
+			<div class="restart">
+				<i class="fa fa-repeat"></i>
+			</div>
+		</section>
+		<ul class="deck animated shake">
+			<li class="card"><i class="fa fa-diamond"></i></li>
+			<li class="card"><i class="fa fa-paper-plane-o"></i></li>
+			<li class="card"><i class="fa fa-anchor"></i></li>
+			<li class="card"><i class="fa fa-bolt"></i></li>
+			<li class="card"><i class="fa fa-cube"></i></li>
+			<li class="card"><i class="fa fa-anchor"></i></li>
+			<li class="card"><i class="fa fa-leaf"></i></li>
+			<li class="card"><i class="fa fa-bicycle"></i></li>
+			<li class="card"><i class="fa fa-diamond"></i></li>
+			<li class="card"><i class="fa fa-bomb"></i></li>
+			<li class="card"><i class="fa fa-leaf"></i></li>
+			<li class="card"><i class="fa fa-bomb"></i></li>
+			<li class="card"><i class="fa fa-bolt"></i></li>
+			<li class="card"><i class="fa fa-bicycle"></i></li>
+			<li class="card"><i class="fa fa-paper-plane-o"></i></li>
+			<li class="card"><i class="fa fa-cube"></i></li>
+		</ul>
+	</div>
+	<div class="popup">
+		<div class="popupContent">
+			<p class="popupText"></p><button class="playAgain">Play Again!</button><button class="close">Close</button>
+		</div>
+	</div>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js">
+	</script> 
+	<script src="js/app.js">
+	</script>
+</body>
+</html>

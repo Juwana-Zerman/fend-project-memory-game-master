@@ -1,0 +1,185 @@
+html {
+	box-sizing: border-box;
+}
+*, *::before, *::after {
+	box-sizing: inherit;
+}
+html, body {
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+}
+body {
+	background: linear-gradient(160deg, #96a 0%, white 100%);
+	font-family: 'Open Sans', sans-serif;
+}
+.container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+h1 {
+	font-weight: bolder;
+}
+/*
+ * Styles for the deck of cards
+ */
+
+.deck {
+	width: 660px;
+	min-height: 680px;
+	background: linear-gradient(160deg, #0cb 0%, #a7c 100%);
+	padding: 32px;
+	border: 2px solid black;
+	border-radius: 10px;
+	box-shadow: 12px 15px 20px 0 #234;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: center;
+	margin: 0 0 3em;
+}
+.deck .card {
+	display: flex;
+	height: 125px;
+	width: 125px;
+	background-image: url("../img/pink-blue-background.jpg");
+	/*image by Acekreations. Taken from Pixabay!*/
+	border: 2px solid black;
+	border-radius: 6px;
+	font-size: 0;
+	color: #fff;
+	cursor: pointer;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	box-shadow: 5px 2px 20px 0 #234;
+}
+.deck .card.open {
+	transform: rotateY(0);
+	background: #0be;
+	cursor: default;
+}
+.deck .card.show {
+	font-size: 33px;
+}
+.deck .card.match {
+	cursor: default;
+	background: #0cb;
+	font-size: 33px;
+}
+/*
+ * Styles for the Score Panel
+ */
+
+.score-panel {
+	text-align: left;
+	width: 400px;
+	margin-bottom: 10px;
+	display: inline-block;
+}
+.score-panel .stars {
+	margin: 0;
+	padding: 9px;
+	display: inline-block;
+	margin: 0 10px 0 0;
+}
+.score-panel .stars li {
+	list-style: none;
+	display: inline-block;
+	color: #0cb;
+	padding-left: 0;
+}
+.score-panel .restart {
+	float: right;
+	cursor: pointer;
+	padding-left: 30px;
+}
+.moves {
+	display: inline-block;
+	text-align: center;
+}
+.time {
+	display: inline-block;
+	text-align: center;
+	padding-left: 30px;
+}
+/*
+* Modal/Popup styling
+*/
+
+.popup {
+	display: none;
+	position: fixed;
+	z-index: 1;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	background: linear-gradient(to right, #ccf, white);
+	animation: bounce;
+}
+.popupContent {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	background-color: #99f;
+	margin: 15% auto;
+	padding: 20px;
+	width: 85%;
+	border: 2px solid #234;
+	border-radius: 10px;
+	font-size: 22px;
+	text-align: center;
+}
+.playAgain {
+	background-color: #eef;
+	border: none;
+	border-radius: 30px;
+	padding: 20px 35px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 18px;
+	font-weight: bold;
+	margin: 6px 4px;
+	cursor: pointer;
+}
+.close {
+	font-size: 18px;
+	font-weight: bold;
+}
+/* Responsive Code Media Queries*/
+
+@media screen and (max-width: 800px) {
+	.deck {
+		width: 420px;
+		min-height: 420px;
+		padding: 20px;
+	}
+	.deck .card {
+		height: 80px;
+		width: 80px;
+	}
+}
+@media screen and (max-width: 460px) {
+	.deck {
+		width: 260px;
+		min-height: 260px;
+		padding: 15px;
+	}
+	.deck .card {
+		height: 55px;
+		width: 55px;
+	}
+	.score-panel {
+		width: 125px;
+		margin: 15px 25px 25px 5px;
+		display: flex;
+		flex-direction: wrap;
+		justify-content: center;
+	}
+}

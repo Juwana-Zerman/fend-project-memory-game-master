@@ -2,6 +2,9 @@
 
 The memory game consists of 8 pairs of cards in a deck. The cards are face down and random. The object of the game is for the player to find all 8 matches. The player is timed and the number of moves are counted. Star ratings are calculated as well based on the player's number of moves. A player can challenge themselves to beat the game in less time or go for less moves to receive a higher star rating.
 
+#Live Game Can be Played Here
+https://jzerman2018.github.io/fend-project-memory-game-master/
+
 ## Game Play
 
 The game begins and the timer starts once the player clicks on the first card.
